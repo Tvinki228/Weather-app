@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="icon" href="cloud.png" type="image/x-icon" />
+        <link rel="stylesheet" href="style.css" />
+        <script defer type="module" src="script.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+        <title>The Weather Application</title>
+    </head>
+    <body class="page">
+        <header>
+            <div class="animation"></div>
+        </header>
+        <main class="page__content">
+            <div class="container">
+                <h1>Weather App</h1>
+                <div class="search-container">
+                    <div class="icon" id="search-icon">
+                        <img src="252035.png" alt="Cloud Icon" />
+                    </div>
+                    <form id="weatherForm" class="hidden">
+                        <label class="enter-text" for="city"
+                            >Enter your city:</label
+                        ><br />
+                        <input
+                            type="text"
+                            id="city"
+                            name="city"
+                            autofocus
+                            placeholder="e.g., Ghent"
+                            required
+                            autocomplete="off"
+                        />
+                        <ul id="citySuggestions" class="city-suggestions"></ul>
+                        <br />
+                        <button type="submit">Get Weather</button>
+                    </form>
+                </div>
+
+                <div id="weather" class="weather-container"></div>
+                <canvas id="temperatureChart" width="400" height="200"></canvas>
+            </div>
+        </main>
+    </body>
+</html>
